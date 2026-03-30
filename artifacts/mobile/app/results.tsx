@@ -1,7 +1,7 @@
+import { Image } from "expo-image";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
 import {
-  Image,
   Platform,
   ScrollView,
   StyleSheet,
@@ -87,7 +87,7 @@ export default function ResultsScreen() {
             <Image
               source={{ uri: imageUri }}
               style={styles.previewImage}
-              resizeMode="cover"
+              contentFit="cover"
             />
             <View style={styles.imageBadge}>
               <Feather name="check-circle" size={14} color="#fff" />

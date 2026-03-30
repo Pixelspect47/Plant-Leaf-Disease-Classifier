@@ -1,11 +1,11 @@
 import * as Haptics from "expo-haptics";
+import { Image } from "expo-image";
 import * as ImagePicker from "expo-image-picker";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import {
   ActivityIndicator,
   Alert,
-  Image,
   Platform,
   ScrollView,
   StyleSheet,
@@ -149,7 +149,7 @@ export default function HomeScreen() {
               <Image
                 source={{ uri: selectedImage.uri }}
                 style={styles.previewImage}
-                resizeMode="cover"
+                contentFit="cover"
               />
               <TouchableOpacity
                 style={styles.clearButton}
