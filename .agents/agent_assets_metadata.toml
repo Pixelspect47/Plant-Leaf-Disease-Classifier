@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "Xx849KTwaqgh1S_3uo0MU"
+uri = "file://artifacts/mobile/APP_DOCUMENTATION.md"
+type = "text"
+title = "Plant Leaf Disease Classifier — Full Documentation"
