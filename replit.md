@@ -16,6 +16,27 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### `artifacts/mobile` — Plant Leaf Disease Classifier (Expo)
+
+React Native mobile app with 3 screens:
+- **Welcome screen** (`app/index.tsx`) — animated landing with "Get Started" button
+- **Home screen** (`app/home.tsx`) — image upload (gallery/camera) + predict button
+- **Results screen** (`app/results.tsx`) — displays top 3 AI predictions with confidence bars
+
+API integration via `utils/api.ts` — sends image to FastAPI `/predict` endpoint as multipart/form-data.
+
+### `artifacts/mobile/backend` — FastAPI Python Backend
+
+PyTorch ShuffleNetV2 model serving 184 plant disease classes.
+- `main.py` — FastAPI app with `/predict` endpoint
+- `requirements.txt` — Python dependencies
+- `README.md` — setup instructions
+- Requires: `best_shufflenet_model.pth` and `classes.txt` placed in the backend/ directory
+
+Run backend: `uvicorn main:app --host 0.0.0.0 --port 8000`
+
 ## Structure
 
 ```text

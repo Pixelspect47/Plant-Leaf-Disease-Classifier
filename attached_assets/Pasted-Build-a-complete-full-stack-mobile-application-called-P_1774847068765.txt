@@ -1,0 +1,176 @@
+Build a complete full-stack mobile application called **"Plant Leaf Disease Classifier"** with a working backend and frontend.
+
+---
+
+## 🧠 BACKEND (FastAPI - REQUIRED)
+
+Create a FastAPI backend that loads and serves a trained PyTorch model.
+
+### Model Details:
+
+* Architecture: ShuffleNetV2 (`shufflenet_v2_x1_0`)
+* Model file: `best_shufflenet_model.pth`
+* Number of classes: 184
+* Framework: PyTorch
+
+---
+
+### 📂 Class Labels
+
+* Class labels are stored in a file named `classes.txt`
+* Load all class names from this file
+* Ensure the order matches training (alphabetically sorted folder names)
+
+---
+
+### ⚠️ VERY IMPORTANT: Model Loading
+
+* Recreate ShuffleNetV2 architecture
+* Replace final fully connected layer to match 184 classes
+* Load weights using:
+  `model.load_state_dict(torch.load("best_shufflenet_model.pth", map_location=torch.device('cpu')))`
+* Set model to evaluation mode (`model.eval()`)
+
+---
+
+### 🔥 Preprocessing (MUST MATCH TRAINING EXACTLY)
+
+Use ONLY this preprocessing for inference:
+
+* Resize image to 256
+* CenterCrop to 224
+* Convert to tensor
+* Normalize using:
+  mean = [0.485, 0.456, 0.406]
+  std = [0.229, 0.224, 0.225]
+
+DO NOT use any random transforms.
+
+---
+
+### 📡 API Endpoint
+
+POST `/predict`
+
+* Accept image as `multipart/form-data`
+* Convert image to RGB
+* Apply preprocessing
+* Run inference
+* Apply softmax
+
+Return TOP 3 predictions:
+
+```json
+{
+  "predictions": [
+    {"disease": "Class1", "confidence": 0.82},
+    {"disease": "Class2", "confidence": 0.10},
+    {"disease": "Class3", "confidence": 0.05}
+  ]
+}
+```
+
+---
+
+### ⚠️ Backend Requirements
+
+* Load model only once at startup
+* Handle invalid images
+* Use CPU (no GPU dependency)
+* Clean, modular code
+
+---
+
+## 📱 FRONTEND (React Native using Expo)
+
+Build a mobile app with 3 screens:
+
+---
+
+### 1. Welcome Screen
+
+* Title: "Plant Leaf Disease Classifier"
+* Subtitle: "Detect plant diseases using AI"
+* Button: "Get Started"
+
+---
+
+### 2. Home Screen
+
+Include:
+
+* Button: "Upload Image from Gallery"
+* Button: "Take Photo using Camera"
+* Ask for permissions properly
+* Show selected image preview
+* Button: "Predict Disease"
+* Disable button if no image selected
+
+---
+
+### 3. Result Screen
+
+Display:
+
+* Uploaded image
+* Top 3 predictions clearly
+
+Example:
+
+1. Leaf Blight — 82%
+2. Rust — 10%
+3. Healthy — 5%
+
+* Highlight top prediction
+* Button: "Try Again"
+
+---
+
+## 🔌 API Integration
+
+* Use Axios
+* API URL:
+
+```text
+http://192.168.1.5:8000/predict
+```
+
+* Send image as `multipart/form-data`
+* Show loading indicator while waiting
+
+---
+
+## 🎨 UI REQUIREMENTS
+
+* Clean modern design
+* Centered layout
+* Card-based UI
+* Proper spacing and padding
+* Show confidence as percentage
+
+---
+
+## ⚠️ ERROR HANDLING
+
+* No image selected
+* API failure
+* Camera permission denied
+
+---
+
+## 📁 PROJECT STRUCTURE
+
+/backend → FastAPI
+/frontend → React Native
+
+---
+
+## 🚀 FINAL REQUIREMENTS
+
+* Fully working app (no placeholders)
+* Backend and frontend must connect successfully
+* Real model inference (no hardcoding)
+* Code must run with:
+
+  * Backend: `uvicorn main:app`
+  * Frontend: `npx expo start`
