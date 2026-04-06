@@ -1,6 +1,6 @@
 import io
-import os
 from pathlib import Path
+from typing import List
 
 import torch
 import torch.nn as nn
@@ -9,7 +9,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 from pydantic import BaseModel
 from torchvision import models, transforms
-from typing import List
 
 BASE_DIR = Path(__file__).parent
 
@@ -27,28 +26,32 @@ with open(CLASSES_FILE) as f:
 NUM_CLASSES = len(CLASS_NAMES)
 print(f"Loaded {NUM_CLASSES} classes from {CLASSES_FILE}")
 
-# ── Build model ────────────────────────────────────────────────────────────
-MODEL_FILE = BASE_DIR / "best_shufflenet_model.pth"
+# ── Build MobileNetV2 model (matches training exactly) ────────────────────
+MODEL_FILE = BASE_DIR / "best_model_mobilenet.pth"
 if not MODEL_FILE.exists():
     raise FileNotFoundError(
         f"Model file not found at {MODEL_FILE}. "
-        "Place best_shufflenet_model.pth in the same directory as main.py."
+        "Place best_model_mobilenet.pth in the same directory as main.py."
     )
 
-model = models.shufflenet_v2_x1_0(weights=None)
-in_features = model.fc.in_features
-model.fc = nn.Linear(in_features, NUM_CLASSES)
+model = models.mobilenet_v2(weights=None)
+
+# Replace classifier to match training code:
+# model.classifier = nn.Sequential(nn.Dropout(0.4), nn.Linear(model.last_channel, num_classes))
+model.classifier = nn.Sequential(
+    nn.Dropout(0.4),
+    nn.Linear(model.last_channel, NUM_CLASSES)
+)
 
 model.load_state_dict(
     torch.load(str(MODEL_FILE), map_location=torch.device("cpu"))
 )
 model.eval()
-print("Model loaded and ready.")
+print("MobileNetV2 model loaded and ready.")
 
-# ── Preprocessing (must match training exactly) ────────────────────────────
+# ── Preprocessing (matches val_tf from training exactly) ──────────────────
 TRANSFORM = transforms.Compose([
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
+    transforms.Resize((224, 224)),
     transforms.ToTensor(),
     transforms.Normalize(
         mean=[0.485, 0.456, 0.406],
@@ -83,7 +86,6 @@ def health():
 
 @app.post("/predict", response_model=PredictResponse)
 async def predict(file: UploadFile = File(...)):
-    # Validate content type
     if file.content_type and not file.content_type.startswith("image/"):
         raise HTTPException(
             status_code=400,
