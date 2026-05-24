@@ -1,0 +1,184 @@
+Aloe Vera_Aloe_Anthracnose
+Aloe Vera_Aloe_Healthy
+Aloe Vera_Aloe_Leaf_Spot
+Aloe Vera_Aloe_Rust
+Aloe Vera_Aloe_Sunburn
+Arabian_jasmine_Anthracnose
+Arabian_jasmine_Cholorosis
+Arabian_jasmine_Dried Leaf
+Arabian_jasmine_Healthy
+Arabian_jasmine_Initial stage
+Arabian_jasmine_Leaf Blight
+Arabian_jasmine_Leaf Spot
+Arabian_jasmine_Pest Damage
+BLACK_PEPPER_DATASET_Footrot
+BLACK_PEPPER_DATASET_Pollu_Disease
+BLACK_PEPPER_DATASET_Slow-Decline
+Bitter Gourd_Downey mildew
+Bitter Gourd_Fresh leaf
+Bitter Gourd_Fusarium wilt
+Bitter Gourd_Mosaic virus
+Blackgram_Anthracnose
+Blackgram_Healthy
+Blackgram_Leaf Crinkle
+Blackgram_Powdery Mildew
+Blackgram_Yellow Mosaic
+Bottle gourd_Anthracnose
+Bottle gourd_Downey mildew
+Bottle gourd_Fresh leaf
+Cassava_Cassava___bacterial_blight
+Cassava_Cassava___brown_streak_disease
+Cassava_Cassava___green_mottle
+Cassava_Cassava___healthy
+Cassava_Cassava___mosaic_disease
+Cauliflower_Black Rot
+Cauliflower_Downy mildew
+Cauliflower_Fresh leaf
+Chrysanthemum_Chrysanthemum_Bacterial_Leaf_Spot
+Chrysanthemum_Chrysanthemum_Healthy
+Chrysanthemum_Chrysanthemum_Septoria_Leaf_Spot
+Cucumber_Anthracnose lesions
+Cucumber_Downy mildew
+Cucumber_Fresh leaf
+Drumstick_Bacterial Leaf Spot
+Drumstick_Cercospora Leaf Spot
+Drumstick_Healthy Leaf
+Drumstick_Yellow Leaf
+Eggplant_Eggplant Cercopora leaf spot
+Eggplant_Eggplant begomovirus
+Eggplant_Eggplant fresh leaf
+Eggplant_Eggplant verticillium wilt
+Grape_Grape___Black_rot
+Grape_Grape___Esca_(Black_Measles)
+Grape_Grape___Leaf_blight_(Isariopsis_Leaf_Spot)
+Grape_Grape___healthy
+Guava_Anthracnose
+Guava_Canker
+Guava_Dot
+Guava_Healthy
+Guava_Rust
+Hibiscus_Hibiscus_Blight
+Hibiscus_Hibiscus_Healthy
+Hibiscus_Hibiscus_Necrosis
+Hibiscus_Hibiscus_Scorch
+Mango Dataset_Anthracnose
+Mango Dataset_Bacterial Canker
+Mango Dataset_Cutting Weevil
+Mango Dataset_Die Back
+Mango Dataset_Gall Midge
+Mango Dataset_Healthy
+Mango Dataset_Powdery Mildew
+Mango Dataset_Sooty Mould
+Money Plant_Money_Plant_Bacterial_Wilt
+Money Plant_Money_Plant_Chlorosis
+Money Plant_Money_Plant_Healthy
+Money Plant_Money_Plant_Manganese_Toxicity
+Neem_Alternaria
+Neem_Dieback
+Neem_Healthy
+Neem_Leaf_Blight
+Neem_Leaf_Miners
+Neem_Leaf_Miners_Powdery_Mildew
+Neem_Powdery_Mildew
+Night_jasmine_healthy
+Night_jasmine_multiple
+Night_jasmine_rust
+Orange_Black spot
+Orange_Melanose
+Orange_canker
+Orange_greening
+Orange_healthy
+Papaya_Anthracnose
+Papaya_BacterialSpot
+Papaya_Curl
+Papaya_Healthy
+Papaya_Mealybug
+Papaya_Mite disease
+Papaya_Mosaic
+Papaya_Ringspot
+Potato_Potato___Early_blight
+Potato_Potato___Late_blight
+Potato_Potato___healthy
+Rose_Rose_Black_Spot
+Rose_Rose_Downy_Mildew
+Rose_Rose_Healthy
+Rose_Rose_Insect_Damage
+Rose_Rose_Mosaic_Virus
+Rose_Rose_Powdery_Mildew
+Rose_Rose_Rust
+Rose_Rose_Yellow_Mosaic_Virus
+Tea_Blister_Blight
+Tea_Brown_Blight
+Tea_Healthy_leaves
+Tea_Leaf_Red_Rust
+Tea_Red_Spider_Mite
+Tea_Tea_Mosquito_Bug
+Tomato_Tomato___Bacterial_spot
+Tomato_Tomato___Early_blight
+Tomato_Tomato___Late_blight
+Tomato_Tomato___Leaf_Mold
+Tomato_Tomato___Septoria_leaf_spot
+Tomato_Tomato___Spider_mites Two-spotted_spider_mite
+Tomato_Tomato___Target_Spot
+Tomato_Tomato___Tomato_Yellow_Leaf_Curl_Virus
+Tomato_Tomato___Tomato_mosaic_virus
+Tomato_Tomato___healthy
+Turmeric_Turmeric_Aphid_Infestation
+Turmeric_Turmeric_Blotch
+Turmeric_Turmeric_Healthy
+Turmeric_Turmeric_Leaf_Necrosis
+Turmeric_Turmeric_Leaf_Spot
+apple_Apple___Apple_scab
+apple_Apple___Black_rot
+apple_Apple___Cedar_apple_rust
+apple_Apple___healthy
+banana_Banana Scab_Moth
+banana_Black Leaf_Streak
+banana_Black_ Sigatoka
+banana_Healthy Banana  leaf
+banana_Panama_Disease
+chilli_cerocospora
+chilli_healthy
+chilli_murda complex
+chilli_nutritional deficiency
+chilli_powdery mildew
+cotton_Cotton_Aphids
+cotton_Cotton_Army worm
+cotton_Cotton_Bacterial blight
+cotton_Cotton_Healthy
+jute_Jute_Cescospora Leaf Spot
+jute_Jute_Golden Mosaic
+jute_Jute_Healthy Leaf
+maize_Maize Healthy
+maize_maize Common_Rust
+maize_maize Gray_Leaf_Spot
+maize_maize ear rot
+maize_maize fall armyworm
+maize_maize stem borer
+pepper bell_Pepper,_bell___Bacterial_spot
+pepper bell_Pepper,_bell___healthy
+ragi_downy
+ragi_healthy
+ragi_mottle
+ragi_seedling
+ragi_smut
+ragi_wilt
+rice_Rice_Bacterialblight
+rice_Rice_Blast
+rice_Rice_Brownspot
+rice_Rice_Tungro
+sugarcane_Sugarcane_Healthy
+sugarcane_Sugarcane_Mosaic
+sugarcane_Sugarcane_RedRot
+sugarcane_Sugarcane_Rust
+sugarcane_Sugarcane_Yellow
+wheat_Wheat Brown leaf Rust
+wheat_Wheat Healthy
+wheat_Wheat Stem fly
+wheat_Wheat aphid
+wheat_Wheat black rust
+wheat_Wheat leaf blight
+wheat_Wheat mite
+wheat_Wheat powdery mildew
+wheat_Wheat scab
+wheat_Wheat___Yellow_Rust

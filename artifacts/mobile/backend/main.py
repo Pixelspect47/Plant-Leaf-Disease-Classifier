@@ -26,7 +26,7 @@ with open(CLASSES_FILE) as f:
 NUM_CLASSES = len(CLASS_NAMES)
 print(f"Loaded {NUM_CLASSES} classes from {CLASSES_FILE}")
 
-# ── Build MobileNetV2 model (matches training exactly) ────────────────────
+# ── MobileNetV2 model────────────────────
 MODEL_FILE = BASE_DIR / "best_model_mobilenet.pth"
 if not MODEL_FILE.exists():
     raise FileNotFoundError(
@@ -49,7 +49,7 @@ model.load_state_dict(
 model.eval()
 print("MobileNetV2 model loaded and ready.")
 
-# ── Preprocessing (matches val_tf from training exactly) ──────────────────
+# ── Preprocessing ──────────────────
 TRANSFORM = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),

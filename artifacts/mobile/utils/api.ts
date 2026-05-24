@@ -13,8 +13,8 @@ const API_BASE_URL =
   process.env.EXPO_PUBLIC_DOMAIN
     ? `https://${process.env.EXPO_PUBLIC_DOMAIN}/api`
     : Platform.OS === "web"
-    ? "/api"
-    : "http://192.168.1.5:8000";
+      ? "/api"
+      : "https://fe9e-103-248-208-100.ngrok-free.app";
 
 export async function predictDisease(image: {
   uri: string;
@@ -42,11 +42,13 @@ export async function predictDisease(image: {
     res = await fetch(url, {
       method: "POST",
       body: formData,
+      headers: {
+        "ngrok-skip-browser-warning": "true",
+      },
     });
-  } catch {
-    throw new Error(
-      "Unable to reach the prediction server. Make sure the backend is running."
-    );
+  } catch (e: unknown) {
+    const msg = e instanceof Error ? e.message : String(e);
+    throw new Error(`Network error: ${msg}`);
   }
 
   if (!res.ok) {
@@ -54,6 +56,15 @@ export async function predictDisease(image: {
     throw new Error(`Server error (${res.status}): ${text}`);
   }
 
-  const data: PredictResponse = await res.json();
+  const rawText = await res.text();
+  console.log("Backend response:", rawText.substring(0, 300));
+
+  let data: PredictResponse;
+  try {
+    data = JSON.parse(rawText);
+  } catch {
+    throw new Error(`Bad response (not JSON): ${rawText.substring(0, 150)}`);
+  }
+
   return data.predictions;
 }

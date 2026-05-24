@@ -1,5 +1,4 @@
 import * as Haptics from "expo-haptics";
-import { Image } from "expo-image";
 import * as ImagePicker from "expo-image-picker";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
@@ -13,6 +12,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { Image } from "expo-image";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Feather } from "@expo/vector-icons";
 import Colors from "@/constants/colors";
@@ -50,12 +50,16 @@ export default function HomeScreen() {
       allowsEditing: true,
       aspect: [1, 1],
       quality: 0.8,
+      base64: true,
     });
 
     if (!result.canceled && result.assets[0]) {
       const asset = result.assets[0];
-      const uri = asset.uri;
-      const ext = uri.split(".").pop()?.toLowerCase() ?? "jpg";
+      let uri = asset.uri;
+      if (Platform.OS === "web" && asset.base64) {
+        uri = `data:image/jpeg;base64,${asset.base64}`;
+      }
+      const ext = asset.uri.split(".").pop()?.toLowerCase() ?? "jpg";
       setSelectedImage({
         uri,
         type: `image/${ext === "jpg" ? "jpeg" : ext}`,
@@ -80,12 +84,16 @@ export default function HomeScreen() {
       allowsEditing: true,
       aspect: [1, 1],
       quality: 0.8,
+      base64: true,
     });
 
     if (!result.canceled && result.assets[0]) {
       const asset = result.assets[0];
-      const uri = asset.uri;
-      const ext = uri.split(".").pop()?.toLowerCase() ?? "jpg";
+      let uri = asset.uri;
+      if (Platform.OS === "web" && asset.base64) {
+        uri = `data:image/jpeg;base64,${asset.base64}`;
+      }
+      const ext = asset.uri.split(".").pop()?.toLowerCase() ?? "jpg";
       setSelectedImage({
         uri,
         type: `image/${ext === "jpg" ? "jpeg" : ext}`,
@@ -204,9 +212,7 @@ export default function HomeScreen() {
           <Text style={styles.tipsTitle}>Tips for best results</Text>
           <View style={styles.tipRow}>
             <Feather name="check-circle" size={14} color={Colors.light.primary} />
-            <Text style={styles.tipText}>
-              Photograph a single leaf clearly
-            </Text>
+            <Text style={styles.tipText}>Photograph a single leaf clearly</Text>
           </View>
           <View style={styles.tipRow}>
             <Feather name="check-circle" size={14} color={Colors.light.primary} />
@@ -214,9 +220,7 @@ export default function HomeScreen() {
           </View>
           <View style={styles.tipRow}>
             <Feather name="check-circle" size={14} color={Colors.light.primary} />
-            <Text style={styles.tipText}>
-              Keep the leaf centered in frame
-            </Text>
+            <Text style={styles.tipText}>Keep the leaf centered in frame</Text>
           </View>
         </View>
 
@@ -293,8 +297,8 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   previewImage: {
-    width: "100%",
-    height: "100%",
+    width: 280,
+    height: 280,
   },
   clearButton: {
     position: "absolute",
@@ -425,3 +429,155 @@ const styles = StyleSheet.create({
     fontFamily: "Inter_600SemiBold",
   },
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

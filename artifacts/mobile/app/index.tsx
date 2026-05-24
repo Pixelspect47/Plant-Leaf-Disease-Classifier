@@ -111,7 +111,7 @@ export default function WelcomeScreen() {
           <Feather name="arrow-right" size={20} color="#fff" />
         </TouchableOpacity>
         <Text style={styles.disclaimer}>
-          Powered by ShuffleNetV2 · 184 plant disease classes
+          Powered by MobileNetV2 · 184 plant disease classes
         </Text>
       </Animated.View>
     </View>

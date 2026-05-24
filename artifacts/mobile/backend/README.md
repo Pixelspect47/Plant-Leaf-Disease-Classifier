@@ -39,4 +39,4 @@ FastAPI backend serving a ShuffleNetV2 PyTorch model trained on 184 plant diseas
 
 - The server uses CPU only — no GPU required.
 - Preprocessing: Resize(256) → CenterCrop(224) → ToTensor → Normalize(ImageNet mean/std)
-- Model architecture: ShuffleNetV2 x1.0 with 184-class output head
+- Model architecture: MobileNetNetV2 x1.0 with 184-class output head
