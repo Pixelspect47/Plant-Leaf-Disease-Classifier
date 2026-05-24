@@ -10,8 +10,9 @@ A full-stack, mobile-first application designed to identify plant diseases accur
 *   **Top 3 Predictions:** The model provides confidence scores for the most likely diagnoses.
 *   **Cross-platform Mobile UI:** A smooth and responsive user interface built using React Native and Expo.
 
-## Screenshots
-<img width="500" height="1100" alt="image" src="https://github.com/user-attachments/assets/f80cf00a-4b18-4696-9fed-88ef1db0d387" />
+| Home Screen | Upload Screen | Results Screen |
+| :---: | :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/f80cf00a-4b18-4696-9fed-88ef1db0d387" width="250" height="550" alt="Home Screen" /> | <img src="PASTE_URL_2_HERE" width="250" height="550" alt="Upload Screen" /> | <img src="PASTE_URL_3_HERE" width="250" height="550" alt="Results Screen" /> |
 
 ## Tech Stack
 
