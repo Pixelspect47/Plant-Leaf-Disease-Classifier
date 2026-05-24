@@ -12,10 +12,7 @@ A full-stack, mobile-first application designed to identify plant diseases accur
 
 | Home Screen | Upload Screen | Results Screen |
 | :---: | :---: | :---: |
-<img width="738" height="1600" alt="Image" src="https://github.com/user-attachments/assets/fa2311f1-0e40-4f6a-b1ae-7bcd33f3f6e9" />
-<img width="738" height="1600" alt="Image" src="https://github.com/user-attachments/assets/0774df2e-e98f-4929-985c-0f365f68c753" />
-<img width="738" height="1600" alt="Image" src="https://github.com/user-attachments/assets/686b3af7-be0e-4d74-ac80-025f00ce838e" />
-
+| <img src="https://github.com/user-attachments/assets/fa2311f1-0e40-4f6a-b1ae-7bcd33f3f6e9" width="200" height="433" alt="Home Screen" /> | <img src="https://github.com/user-attachments/assets/0774df2e-e98f-4929-985c-0f365f68c753" width="200" height="433" alt="Upload Screen" /> | <img src="https://github.com/user-attachments/assets/686b3af7-be0e-4d74-ac80-025f00ce838e" width="200" height="433" alt="Results Screen" /> |
 ## Tech Stack
 
 **Frontend (Mobile App)**
