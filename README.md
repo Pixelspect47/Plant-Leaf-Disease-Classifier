@@ -11,12 +11,7 @@ A full-stack, mobile-first application designed to identify plant diseases accur
 *   **Cross-platform Mobile UI:** A smooth and responsive user interface built using React Native and Expo.
 
 ## Screenshots
-
-*(Replace these placeholder links with actual images from your app once you upload them to GitHub! You can drag and drop images directly into GitHub to get the URLs)*
-
-| Home Screen | Upload Screen | Results Screen |
-| :---: | :---: | :---: |
-| <img src="https://via.placeholder.com/250x500.png?text=Home+Screen" width="250"> | <img src="https://via.placeholder.com/250x500.png?text=Upload+Screen" width="250"> | <img src="https://via.placeholder.com/250x500.png?text=Results+Screen" width="250"> |
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/f80cf00a-4b18-4696-9fed-88ef1db0d387" />
 
 ## Tech Stack
 
